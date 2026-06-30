@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Average Joe's MBA — More Jobs for Northern California Service Businesses (Stencil style)</title>
+<meta name="description" content="The Average Joe's MBA helps Northern California service businesses get more local jobs with no-nonsense marketing, advising, AI, and systems. Proudly based in Rocklin, CA. 5.0 stars on Google.">
+<meta name="theme-color" content="#F7C81E">
+<meta property="og:title" content="The Average Joe's MBA — More Jobs for NorCal Service Businesses">
+<meta property="og:description" content="Marketing, advising & systems that get Northern California service businesses more local jobs. Proudly based in Rocklin, CA.">
+<meta property="og:image" content="hero-founders.jpg">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#F7C81E;
+    --gold-deep:#E3A700;
+    --ink:#141414;
+    --steel:#2A2D31;
+    --concrete:#46494E;
+    --paper:#FFFFFF;
+    --bone:#F4F1EA;
+    --muted:#5C5F63;
+    --line:#D9D5C9;
+    --display:'Black Ops One';
+    --head:'Oswald';
+    --body:'Barlow';
+    --hazard:repeating-linear-gradient(45deg,#141414 0 16px,#F7C81E 16px 32px);
+    --frame:4px solid var(--ink);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--body),system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  h1,h2,.display{font-family:var(--display),sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  h3,h4{font-family:var(--head),sans-serif;text-transform:uppercase;letter-spacing:.02em;font-weight:700}
+  .btn,nav a,.eyebrow,.tag,.kicker,.label{font-family:var(--head),sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1200px,92%);margin-inline:auto}
+  .eyebrow{display:inline-block;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:var(--ink);background:var(--gold);padding:.32rem .7rem;border:2px solid var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1rem;letter-spacing:.03em;text-transform:uppercase;padding:.95rem 1.6rem;border:3px solid var(--ink);cursor:pointer;transition:transform .14s,box-shadow .18s,background .18s;line-height:1}
+  .btn-primary{background:var(--gold);color:var(--ink);box-shadow:6px 6px 0 var(--ink)}
+  .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+  .btn-dark{background:var(--ink);color:#fff;box-shadow:6px 6px 0 var(--gold)}
+  .btn-dark:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--gold)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .btn-sm{padding:.6rem 1rem;font-size:.88rem;box-shadow:4px 4px 0 var(--ink)}
+
+  /* Variant switcher */
+  .switch{background:var(--steel);color:#fff;font-family:var(--head),sans-serif;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
+  .switch .wrap{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;padding:.5rem 0}
+  .switch .lbl{color:var(--gold);font-weight:700;margin-right:.4rem}
+  .switch a{padding:.3rem .7rem;border:2px solid #555;font-weight:600}
+  .switch a.active{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .switch a:not(.active):hover{border-color:var(--gold);color:var(--gold)}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:60;background:var(--gold);border-bottom:4px solid var(--ink)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem 0;min-height:62px}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:var(--display),sans-serif;text-transform:uppercase;font-size:1.1rem;letter-spacing:.01em}
+  .brand img{width:42px;height:42px;border:2px solid var(--ink);background:#fff;border-radius:6px;object-fit:contain}
+  .navlinks{display:flex;align-items:center;gap:1.35rem}
+  .navlinks a:not(.btn){font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;color:var(--ink)}
+  .navlinks a:not(.btn):hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:3px}
+  .menu-btn{display:none;background:var(--ink);color:var(--gold);border:0;width:46px;height:42px;font-size:1.4rem;cursor:pointer;border-radius:6px}
+
+  .hazard{height:16px;background:var(--hazard)}
+  .locbar{background:var(--ink);color:var(--gold);font-family:var(--head),sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;text-align:center;padding:.55rem 1rem}
+
+  /* Hero */
+  .hero{background:var(--gold);border-bottom:4px solid var(--ink);padding:clamp(2.4rem,5vw,4.4rem) 0;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(1.6rem,4vw,3.2rem);align-items:center}
+  .hero h1{font-size:clamp(2.7rem,7.4vw,5.4rem);margin:1rem 0 .4rem}
+  .hero h1 .u{display:inline-block;background:var(--ink);color:var(--gold);padding:0 .14em}
+  .hero .lead{font-size:clamp(1.05rem,2.3vw,1.28rem);font-weight:500;max-width:40ch;margin:1.1rem 0 1.8rem;color:#2a2a2a}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:1.4rem;margin-top:2rem;flex-wrap:wrap}
+  .hero-stats .s{border-left:4px solid var(--ink);padding-left:.7rem}
+  .hero-stats .s .n{font-family:var(--display),sans-serif;font-size:1.7rem;line-height:1}
+  .hero-stats .s .l{font-family:var(--head),sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:.74rem;color:#333}
+  .hero-figure{border:var(--frame);box-shadow:12px 12px 0 var(--ink);background:#fff}
+  .hero-figure img{width:100%;display:block}
+  .stars{color:#1a1a1a;letter-spacing:2px}
+
+  /* Trust */
+  .trust{background:var(--steel);color:#fff;padding:1rem 0}
+  .trust .wrap{display:flex;gap:1rem 2rem;align-items:center;justify-content:center;flex-wrap:wrap;font-family:var(--head),sans-serif}
+  .trust .l{color:var(--gold);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+  .trust b{letter-spacing:.04em;text-transform:uppercase}
+  .trust span{color:#c9c9c9}
+
+  section{padding:clamp(3rem,6vw,5rem) 0}
+  .head{max-width:760px;margin-bottom:2.4rem}
+  .head.center{margin-inline:auto;text-align:center}
+  .head h2{font-size:clamp(2.1rem,5vw,3.4rem);margin:.7rem 0}
+  .head p{font-size:1.08rem;color:var(--muted)}
+
+  /* Reviews carousel */
+  .reviews{background:var(--ink);color:#fff;border-top:4px solid var(--ink);position:relative}
+  .reviews .eyebrow{color:var(--ink)}
+  .reviews h2{color:#fff}
+  .ghead{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.4rem}
+  .gscore{font-family:var(--display),sans-serif;font-size:2.6rem;color:var(--gold);line-height:1}
+  .gstars{color:var(--gold);font-size:1.3rem;letter-spacing:3px}
+  .gmeta{font-family:var(--head),sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:#cfcfcf}
+  .carousel{overflow:hidden;margin-top:1.8rem}
+  .track{display:flex;gap:1.2rem;transition:transform .42s cubic-bezier(.22,.61,.36,1)}
+  .rev{flex:0 0 100%;background:#fff;color:var(--ink);border:3px solid var(--gold);box-shadow:7px 7px 0 var(--gold);padding:1.5rem 1.6rem;display:flex;flex-direction:column}
+  .rev .rs{color:var(--gold-deep);letter-spacing:2px;font-size:1.05rem;margin-bottom:.6rem}
+  .rev .q{font-size:1.02rem;line-height:1.55;flex:1}
+  .rev .who{display:flex;align-items:center;gap:.7rem;margin-top:1.1rem;border-top:2px solid var(--line);padding-top:.9rem}
+  .rev .av{width:38px;height:38px;border:2px solid var(--ink);background:var(--gold);font-family:var(--display),sans-serif;display:grid;place-items:center;font-size:1.05rem}
+  .rev .nm{font-family:var(--head),sans-serif;font-weight:700;text-transform:uppercase;font-size:.92rem;line-height:1}
+  .rev .src{font-family:var(--head),sans-serif;font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .car-ctrl{display:flex;align-items:center;justify-content:space-between;margin-top:1.6rem;gap:1rem;flex-wrap:wrap}
+  .dots{display:flex;gap:.5rem}
+  .dot{width:12px;height:12px;border:2px solid var(--gold);background:transparent;cursor:pointer;padding:0}
+  .dot.on{background:var(--gold)}
+  .arrows{display:flex;gap:.6rem}
+  .arrow{width:48px;height:48px;border:3px solid var(--gold);background:transparent;color:var(--gold);font-size:1.3rem;cursor:pointer;font-weight:700;transition:background .15s,color .15s}
+  .arrow:hover{background:var(--gold);color:var(--ink)}
+
+  /* Services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .svc{position:relative;border:3px solid var(--ink);background:#fff;padding:1.6rem;box-shadow:6px 6px 0 var(--ink);transition:transform .15s;display:flex;flex-direction:column}
+  .svc:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+  .svc .num{font-family:var(--display),sans-serif;font-size:1.2rem;color:var(--gold-deep)}
+  .svc .ic{font-size:2rem;margin:.3rem 0 .6rem}
+  .svc h3{font-size:1.2rem;line-height:1.1;margin-bottom:.5rem}
+  .svc p{color:var(--muted);font-size:.97rem;flex:1}
+  .svc .lead-label{font-family:var(--head),sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem;color:var(--ink);background:var(--gold);border:2px solid var(--ink);padding:.18rem .55rem;align-self:flex-start;margin-top:.9rem}
+  .svc.feature{background:var(--gold)}
+  .svc .soon{position:absolute;top:-13px;right:-10px;background:var(--ink);color:var(--gold);font-family:var(--head),sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.7rem;padding:.3rem .55rem;border:2px solid var(--ink)}
+
+  /* Trades */
+  .trades{background:var(--bone);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink)}
+  .trade-tags{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+  .trade-tags span{font-family:var(--head),sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.86rem;background:#fff;border:2px solid var(--ink);padding:.45rem .8rem;box-shadow:3px 3px 0 var(--ink)}
+
+  /* Story */
+  .story{background:var(--bone)}
+  .story-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(1.6rem,4vw,3rem);align-items:center}
+  .story-figure{border:var(--frame);box-shadow:12px 12px 0 var(--gold)}
+  .story p{margin-top:1rem;color:#333;font-size:1.04rem}
+  .story .pull{font-family:var(--display),sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,2.7vw,1.9rem);line-height:1.05;margin:1.4rem 0;border-left:6px solid var(--gold);padding-left:1rem}
+  .founders{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-top:2.2rem}
+  .founder{border:3px solid var(--ink);background:#fff;box-shadow:6px 6px 0 var(--ink)}
+  .founder img{width:100%;display:block;border-bottom:3px solid var(--ink)}
+  .founder .b{padding:1rem 1.1rem}
+  .founder .b h3{font-size:1.18rem}
+  .founder .b span{font-family:var(--head),sans-serif;color:var(--gold-deep);text-transform:uppercase;letter-spacing:.05em;font-size:.82rem;font-weight:600}
+  .founder .b p{color:var(--muted);font-size:.94rem;margin-top:.35rem}
+
+  /* Events */
+  .events{background:var(--paper);border-top:4px solid var(--ink)}
+  .event{border:var(--frame);background:#fff;box-shadow:10px 10px 0 var(--ink);margin-bottom:2.1rem;overflow:hidden}
+  .event-top{display:flex;flex-wrap:wrap;align-items:stretch}
+  .event-date{background:var(--gold);border-right:4px solid var(--ink);padding:1.3rem 1.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-width:148px}
+  .event-date .m{font-family:var(--head),sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:1rem}
+  .event-date .d{font-family:var(--display),sans-serif;font-size:3.2rem;line-height:.9}
+  .event-date .y{font-family:var(--head),sans-serif;font-weight:600;font-size:.88rem}
+  .event-head{flex:1;min-width:240px;padding:1.3rem 1.5rem;display:flex;flex-direction:column;justify-content:center;gap:.45rem}
+  .event-head .tag{display:inline-block;align-self:flex-start;background:var(--ink);color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;padding:.25rem .6rem}
+  .event-head h3{font-family:var(--display),sans-serif;font-size:clamp(1.5rem,3.2vw,2.05rem);letter-spacing:.01em}
+  .event-head .quote{font-style:italic;color:#333;font-size:1rem;font-family:var(--body),sans-serif;text-transform:none;letter-spacing:0}
+  .event-price{background:var(--ink);color:#fff;padding:1.3rem 1.4rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-width:128px}
+  .event-price .p{font-family:var(--display),sans-serif;color:var(--gold);font-size:2.3rem;line-height:1}
+  .event-price .pl{font-family:var(--head),sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.7rem;color:#cfcfcf}
+  .event-body{padding:1.4rem 1.6rem 1.7rem;border-top:3px dashed var(--line)}
+  .event-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-bottom:1rem}
+  .event-meta span{font-family:var(--head),sans-serif;font-weight:500;font-size:.94rem;display:flex;gap:.4rem;align-items:flex-start}
+  .event-body>p{color:#333;margin-bottom:1rem}
+  .walk{list-style:none;display:grid;gap:.5rem;margin-bottom:1.4rem}
+  .walk li{display:flex;gap:.6rem;align-items:flex-start;font-size:.97rem}
+  .walk li::before{content:"\2713";font-weight:700;color:var(--ink);background:var(--gold);border:2px solid var(--ink);width:22px;height:22px;display:inline-grid;place-items:center;flex:0 0 22px;font-size:.78rem;margin-top:.1rem}
+  .event-foot{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;justify-content:space-between}
+  .event-foot .note{font-family:var(--head),sans-serif;color:var(--muted);font-size:.86rem;flex:1;min-width:200px}
+
+  /* CTA band */
+  .cta-band{background:var(--gold);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink);text-align:center}
+  .cta-band h2{font-size:clamp(2.3rem,5.4vw,3.8rem)}
+  .cta-band p{font-size:1.12rem;font-weight:500;max-width:50ch;margin:1rem auto 1.8rem;color:#2a2a2a}
+  .cta-band .hero-cta{justify-content:center}
+  .cta-band .phone{font-family:var(--display),sans-serif;font-size:1.6rem;margin-top:1.2rem}
+
+  /* Footer */
+  footer{background:var(--ink);color:#bdbdbd;padding:3rem 0 2rem}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;padding-bottom:2rem;border-bottom:1px solid #333}
+  footer .brand{color:#fff;margin-bottom:.9rem}
+  footer p{font-size:.95rem;max-width:36ch}
+  footer h5{font-family:var(--head),sans-serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:.92rem;margin-bottom:.9rem}
+  footer ul{list-style:none;display:grid;gap:.55rem}
+  footer ul a{font-size:.94rem}
+  footer ul a:hover{color:var(--gold)}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding-top:1.4rem;font-family:var(--head),sans-serif;font-size:.85rem;color:#8a8a8a;text-transform:uppercase;letter-spacing:.04em}
+
+  @media(max-width:900px){
+    .hero-grid,.story-grid{grid-template-columns:1fr}
+    .svc-grid{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .hero-figure,.story-figure{order:-1}
+  }
+  @media(max-width:620px){
+    .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--gold);border-bottom:4px solid var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:.4rem 6%}
+    .navlinks.open{display:flex}
+    .navlinks a:not(.btn){padding:.85rem 0;border-bottom:2px solid rgba(20,20,20,.15)}
+    .navlinks .btn{margin:.8rem 0;text-align:center;justify-content:center}
+    .nav{position:relative}
+    .menu-btn{display:block}
+    .svc-grid,.founders,.foot-grid{grid-template-columns:1fr}
+    .event-price{width:100%;border-top:4px solid var(--ink)}
+    .event-date{border-right:0;border-bottom:4px solid var(--ink);width:100%;flex-direction:row;gap:.6rem;min-width:0}
+    .event-date .d{font-size:2.5rem}
+    .hero-figure,.story-figure{box-shadow:7px 7px 0 var(--ink)}
+    .event{box-shadow:6px 6px 0 var(--ink)}
+    .btn{width:100%;justify-content:center}
+    .hero-cta .btn,.cta-band .btn,.event-foot .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+
+<div class="switch">
+  <div class="wrap">
+    <span class="lbl">Font preview:</span>
+    <a href="index.html" class="active">A · Stencil</a>
+    <a href="slab.html" class="">B · Slab</a>
+    <a href="condensed.html" class="">C · Condensed</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><img src="logo.png" alt="The Average Joe's MBA logo"> Average Joe's MBA</a>
+    <nav class="navlinks" id="nav">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#events">Events</a>
+      <a href="#story">Our Story</a>
+      <a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="btn btn-dark btn-sm">Book a Free Call</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+<div class="hazard"></div>
+<div class="locbar">&#128205; Proudly based in Rocklin, CA &nbsp;&middot;&nbsp; Serving service businesses across Northern California</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">For Northern California service businesses</span>
+        <h1>More jobs. <span class="u">Less guesswork.</span></h1>
+        <p class="lead">We help Northern California service businesses &mdash; contractors, trades, and home-service pros &mdash; build the marketing and systems that bring in steady, local work. No corporate fluff. No jargon. Just the recipe.</p>
+        <div class="hero-cta">
+          <a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="btn btn-dark">Book a Free Strategy Call &rarr;</a>
+          <a href="#reviews" class="btn btn-ghost">See Our 5.0&#9733; Reviews</a>
+        </div>
+        <div class="hero-stats">
+          <div class="s"><div class="n">5.0&#9733;</div><div class="l">35 Google reviews</div></div>
+          <div class="s"><div class="n">Rocklin</div><div class="l">CA &middot; NorCal proud</div></div>
+          <div class="s"><div class="n">Operators</div><div class="l">Not academics</div></div>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="hero-founders.jpg" alt="Brandon Walcott and Chris Camara, founders of The Average Joe's MBA">
+      </figure>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <span class="l">Trusted by NorCal service pros</span>
+      <b>SparkStudio HQ</b><span>&bull;</span><b>New York Life</b><span>&bull;</span><b>Lighthouse Window Cleaning</b><span>&bull;</span><b>Gingerly Pest</b><span>&bull;</span><b>KH Media</b>
+    </div>
+  </div>
+
+  <!-- REVIEWS CAROUSEL -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Straight from Google</span>
+        <h2>Don't take our word for it</h2>
+        <div class="ghead">
+          <span class="gscore">5.0</span>
+          <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="gmeta">Rated 5.0 across 35 Google reviews</span>
+        </div>
+      </div>
+      <div class="carousel"><div class="track" id="track">
+        <article class="rev"><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="q">&ldquo;I have been to two events now with Chris and Brandon. Aside from the fact that they're really cool guys, the information they provide is excellent &mdash; whether you're new in your journey of business or have been around for a bit&hellip;&rdquo;</p><div class="who"><span class="av">T</span><div><div class="nm">Tyson &middot; Gingerly Pest</div><div class="src">Google review &middot; Local Guide</div></div></div></article>
+        <article class="rev"><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="q">&ldquo;I have now attended my second Average Joe class and both times I've taken something new from it. Chris and Brandon dive into how to grow your business, and the practices they discuss are applicable whether you just launched or have been in business&hellip;&rdquo;</p><div class="who"><span class="av">S</span><div><div class="nm">Stephani Robertson</div><div class="src">Google review &middot; Local Guide</div></div></div></article>
+        <article class="rev"><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="q">&ldquo;Thank you, Chris and Brandon, for sharing your insights on local SEO, right here just outside of Rocklin. It is always great when a business owner can walk away with actionable items to help propel their business forward. I can see you have a heart for small business.&rdquo;</p><div class="who"><span class="av">S</span><div><div class="nm">Stacey Cordova</div><div class="src">Google review</div></div></div></article>
+        <article class="rev"><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="q">&ldquo;He's approachable, easy to work with, and genuinely wants to see others succeed.&rdquo;</p><div class="who"><span class="av">G</span><div><div class="nm">Verified attendee</div><div class="src">Google review</div></div></div></article>
+        <article class="rev"><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="q">&ldquo;I really enjoyed participating in the Average Joe's Secret Sauce Masterclass! Practical, no fluff, and immediately useful for my business.&rdquo;</p><div class="who"><span class="av">G</span><div><div class="nm">Verified attendee</div><div class="src">Google review</div></div></div></article>
+        <article class="rev"><div class="rs">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="q">&ldquo;I highly recommend attending a future Secret Sauce presentation! Worth every minute.&rdquo;</p><div class="who"><span class="av">G</span><div><div class="nm">Verified attendee</div><div class="src">Google review</div></div></div></article>
+      </div></div>
+      <div class="car-ctrl">
+        <a href="https://www.google.com/maps/place/The+Average+Joe's+MBA/@38.8038377,-121.2954158,17z/data=!4m8!3m7!1s0x809b2376b1ff4909:0x14af915effb2801c!8m2!3d38.8038377!4d-121.2954158!9m1!1b1!16s%2Fg%2F11yf618vyb" class="btn btn-primary btn-sm">Read all 35 reviews on Google &rarr;</a>
+        <div style="display:flex;align-items:center;gap:1.2rem">
+          <div class="dots" id="dots"></div>
+          <div class="arrows"><button class="arrow" id="prev" aria-label="Previous">&#8249;</button><button class="arrow" id="next" aria-label="Next">&#8250;</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow">What we do</span>
+        <h2>Built to get you more work</h2>
+        <p>Five ways we help Northern California service businesses fill the pipeline and run smoother &mdash; pick where you're stuck.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc"><span class="num">01</span><div class="ic">&#127908;</div><h3>Live Masterclasses</h3><p>Our sold-out Secret Sauce events &mdash; the exact marketing foundations and systems that bring service businesses more local jobs.</p><a href="#events" class="lead-label">See upcoming &rarr;</a></div>
+        <div class="svc"><span class="num">02</span><div class="ic">&#129520;</div><h3>Business Advising</h3><p>One-on-one guidance from owners who run real service businesses. Real decisions, real levers, fewer costly blind spots.</p><a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="lead-label">Book a call &rarr;</a></div>
+        <div class="svc"><span class="num">03</span><div class="ic">&#128226;</div><h3>Done-For-You Marketing</h3><p>Hand it off. We build the local SEO, content, and campaigns that get your service business found and booked across NorCal.</p><a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="lead-label">Put us to work &rarr;</a></div>
+        <div class="svc feature"><span class="num">04</span><div class="ic">&#129302;</div><h3>AI Jumpstart</h3><p>Put AI to work on quotes, follow-ups, scheduling, and admin &mdash; adopted, not just admired. Practical workflows, zero jargon.</p><a href="#events" class="lead-label" style="background:#fff">Start here &rarr;</a></div>
+        <div class="svc"><span class="soon">Launching Soon</span><span class="num">05</span><div class="ic">&#128218;</div><h3>The Living Library</h3><p>Our growing vault of actionable courses &mdash; living because we are, constantly adding what's working right now.</p><a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="lead-label">Get early access &rarr;</a></div>
+        <div class="svc" style="background:var(--ink);color:#fff;box-shadow:6px 6px 0 var(--gold)"><div class="ic">&#128736;&#65039;</div><h3 style="color:#fff">Not sure where to start?</h3><p style="color:#cfcfcf">Tell us where the work's getting stuck and we'll point you to the fastest path to more jobs.</p><a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="lead-label">Book a free call &rarr;</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADES -->
+  <section class="trades">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Who it's for</span>
+        <h2>Made for Northern California service businesses</h2>
+        <p>If you run a service business in the Greater Sacramento area or anywhere in NorCal, this is built for you:</p>
+      </div>
+      <div class="trade-tags">
+        <span>Contractors</span><span>HVAC</span><span>Plumbing</span><span>Electrical</span><span>Landscaping</span><span>Roofing</span><span>Pest Control</span><span>Window &amp; Solar Cleaning</span><span>Cleaning &amp; Janitorial</span><span>Painting</span><span>Concrete &amp; Hardscape</span><span>Handyman &amp; Home Services</span><span>Insurance &amp; Financial</span><span>Auto &amp; Fleet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <figure class="story-figure"><img src="story.jpg" alt="Brandon and Chris at an Average Joe's MBA event"></figure>
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2 style="font-size:clamp(2rem,4.6vw,3rem);margin:.7rem 0">How this all started&hellip;</h2>
+        <p>It's funny how two jokesters joked their way into starting a business. This whole thing was never really the plan.</p>
+        <p>Chris was heads-down building his insurance agency around the Greater Sacramento area, learning the hard way what worked and what didn't, and swapping strategies with other local owners. Brandon, who runs the <em>Failure to Abundance</em> podcast, kept watching him help these entrepreneurs and finally dared him: <em>"If you think you know so much, why don't you come on the podcast and prove it?"</em></p>
+        <p class="pull">"Uh oh&hellip; I think we accidentally started a business."</p>
+        <p>Chris distilled years of grinding into a no-fluff presentation. People asked them to speak to their groups, so they put on a live event to see what would happen. It sold out. The next one sold out faster. That's what grew into The Average Joe's MBA.</p>
+        <p><strong>We're not academics &mdash; we're practitioners.</strong> Brandon and Chris still run their own businesses every single day, right here in Northern California.</p>
+        <div class="founders">
+          <div class="founder"><img src="brandon.jpg" alt="Brandon Walcott"><div class="b"><h3>Brandon Walcott</h3><span>Co-Founder &middot; Failure to Abundance</span><p>The instigator behind the dare &mdash; and the storytelling that turned a presentation into a movement.</p></div></div>
+          <div class="founder"><img src="chris.jpg" alt="Chris Camara"><div class="b"><h3>Chris Camara</h3><span>Co-Founder &middot; Insurance Agency Owner</span><p>The practitioner who distilled years in the trenches into simple, actionable frameworks.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events" id="events">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Upcoming live events</span>
+        <h2>Come learn with us in person</h2>
+        <p>No gurus. No sales pitch disguised as "value." Just Brandon and Chris sharing what's actually working to get more clients right now.</p>
+      </div>
+      <article class="event">
+        <div class="event-top">
+          <div class="event-date"><span class="m">Jul</span><span class="d">14</span><span class="y">2026</span></div>
+          <div class="event-head"><span class="tag">Workshop &middot; AI</span><h3>Intro to AI for Your Business</h3><p class="quote">"AI is everywhere, and let's be honest &mdash; it feels like everyone else got the instruction manual except you."</p></div>
+          <div class="event-price"><span class="p">$50</span><span class="pl">Per Ticket</span></div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta"><span>&#128197; Tue, July 14, 2026</span><span>&#9200; 10:00 AM</span><span>&#128205; SparkStudio HQ &mdash; Loomis, CA</span></div>
+          <p>A pre-101 class for owners who know they need AI but have no idea where to begin. No jargon, no tech-babble. Learn simple ways to put AI to work in marketing, admin, customer service, scheduling, and decisions.</p>
+          <div class="event-foot"><span class="note">Perfect for the curious, confused, skeptical, or mildly terrified. Seating is limited.</span><a href="https://luma.com/h03ra4xn" class="btn btn-primary btn-sm">Get Tickets &rarr;</a></div>
+        </div>
+      </article>
+      <article class="event">
+        <div class="event-top">
+          <div class="event-date"><span class="m">Jul</span><span class="d">23</span><span class="y">2026</span></div>
+          <div class="event-head"><span class="tag">The Secret Sauce</span><h3>The Secret Sauce &mdash; Live</h3><p class="quote">"Everyone sees the highlight reel, but very few people see the recipe."</p></div>
+          <div class="event-price"><span class="p">$25</span><span class="pl">Per Ticket</span></div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta"><span>&#128197; Thu, July 23, 2026</span><span>&#9200; Doors &amp; lunch 11:30 AM &middot; Talk 12:00 PM</span><span>&#128205; Elk Grove, CA</span></div>
+          <p>The real levers that move the needle to get more clients. What's actually working, what's painfully failed, and the systems that build stronger lead flow. Arrive early for lunch and high-caliber local networking.</p>
+          <div class="event-foot"><span class="note">Kindly sponsored by Colby Bell at New York Life.</span><a href="https://luma.com/g86uye1u" class="btn btn-primary btn-sm">Get Tickets &rarr;</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" id="contact">
+    <div class="wrap">
+      <span class="eyebrow" style="background:var(--ink);color:var(--gold);border-color:var(--ink)">Let's build</span>
+      <h2 style="margin-top:.8rem">Ready to get more jobs?</h2>
+      <p>Book a free strategy call and we'll map the fastest path to more local work for your Northern California service business.</p>
+      <div class="hero-cta">
+        <a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="btn btn-dark">Book a Free Strategy Call &rarr;</a>
+        <a href="https://www.google.com/maps/place/The+Average+Joe's+MBA/@38.8038377,-121.2954158,17z/data=!4m8!3m7!1s0x809b2376b1ff4909:0x14af915effb2801c!8m2!3d38.8038377!4d-121.2954158!9m1!1b1!16s%2Fg%2F11yf618vyb" class="btn btn-ghost">See Our Google Reviews</a>
+      </div>
+      <div class="phone"><a href="tel:+19164158662">&#128222; (916) 415-8662</a></div>
+      <p style="margin-top:.6rem;font-size:.98rem">Or email <a href="mailto:Hello@AverageJoeMBA.com" style="font-weight:700;text-decoration:underline">Hello@AverageJoeMBA.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><img src="logo.png" alt="Logo" style="width:42px;height:42px;border:2px solid #fff;border-radius:6px"> Average Joe's MBA</a>
+        <p>Marketing, advising &amp; systems that get Northern California service businesses more local jobs. We're not academics &mdash; we're practitioners.</p>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#events">Live Events</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Rocklin, CA</h5>
+        <ul>
+          <li>6520 Lonetree Blvd #2019<br>Rocklin, CA 95765</li>
+          <li><a href="tel:+19164158662">(916) 415-8662</a></li>
+          <li><a href="mailto:Hello@AverageJoeMBA.com">Hello@AverageJoeMBA.com</a></li>
+          <li><a href="https://www.google.com/maps/place/The+Average+Joe's+MBA/@38.8038377,-121.2954158,17z/data=!4m8!3m7!1s0x809b2376b1ff4909:0x14af915effb2801c!8m2!3d38.8038377!4d-121.2954158!9m1!1b1!16s%2Fg%2F11yf618vyb">5.0&#9733; on Google</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 The Average Joe's MBA &mdash; All Rights Reserved.</span>
+      <span>Proudly based in Rocklin, CA &middot; Serving Northern California</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var mb=document.getElementById('menuBtn'),nv=document.getElementById('nav');
+  mb.addEventListener('click',function(){nv.classList.toggle('open');});
+  nv.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nv.classList.remove('open');});});
+
+  // Carousel
+  var track=document.getElementById('track'),slides=track.children,total=slides.length;
+  var idx=0,dotsWrap=document.getElementById('dots');
+  function perView(){return window.innerWidth>=900?3:(window.innerWidth>=600?2:1);}
+  function maxIdx(){return Math.max(0,total-perView());}
+  function build(){dotsWrap.innerHTML='';var pages=maxIdx()+1;for(var i=0;i<pages;i++){(function(i){var b=document.createElement('button');b.className='dot'+(i===idx?' on':'');b.addEventListener('click',function(){idx=i;render();});dotsWrap.appendChild(b);})(i);}}
+  function render(){
+    if(idx>maxIdx())idx=maxIdx();if(idx<0)idx=0;
+    var gap=parseFloat(getComputedStyle(track).gap)||0;
+    var cardW=slides[0].getBoundingClientRect().width;
+    track.style.transform='translateX(-'+(idx*(cardW+gap))+'px)';
+    var ds=dotsWrap.children;for(var i=0;i<ds.length;i++)ds[i].className='dot'+(i===idx?' on':'');
+  }
+  document.getElementById('next').addEventListener('click',function(){idx=(idx>=maxIdx())?0:idx+1;render();});
+  document.getElementById('prev').addEventListener('click',function(){idx=(idx<=0)?maxIdx():idx-1;render();});
+  var timer=setInterval(function(){idx=(idx>=maxIdx())?0:idx+1;render();},5000);
+  track.parentElement.addEventListener('mouseenter',function(){clearInterval(timer);});
+  var rb=false;window.addEventListener('resize',function(){clearTimeout(rb);rb=setTimeout(function(){build();render();},150);});
+  build();render();
+</script>
+</body>
+</html>
