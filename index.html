@@ -110,6 +110,8 @@
   .carousel{overflow:hidden;margin-top:1.8rem}
   .track{display:flex;gap:1.2rem;transition:transform .42s cubic-bezier(.22,.61,.36,1)}
   .rev{flex:0 0 100%;background:#fff;color:var(--ink);border:3px solid var(--gold);box-shadow:7px 7px 0 var(--gold);padding:1.5rem 1.6rem;display:flex;flex-direction:column}
+  @media(min-width:600px){.rev{flex-basis:calc((100% - 1.2rem)/2)}}
+  @media(min-width:900px){.rev{flex-basis:calc((100% - 2.4rem)/3)}}
   .rev .rs{color:var(--gold-deep);letter-spacing:2px;font-size:1.05rem;margin-bottom:.6rem}
   .rev .q{font-size:1.02rem;line-height:1.55;flex:1}
   .rev .who{display:flex;align-items:center;gap:.7rem;margin-top:1.1rem;border-top:2px solid var(--line);padding-top:.9rem}
